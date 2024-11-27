@@ -129,6 +129,7 @@ function createRoof(style: number) {
   return roof;
 }
 
+
 function createHouse(scene: Scene, style: number) {
   const box = createBox(style);
   const roof = createRoof(style);
@@ -143,6 +144,7 @@ function createHouse(scene: Scene, style: number) {
   // last true allows combined mesh to use multiple materials
   return house;
 }
+
 
 function createHouses(scene: Scene, style: number) {
   //Start by locating one each of the two house types then add others
@@ -202,6 +204,7 @@ function createHouses(scene: Scene, style: number) {
   }
   // nothing returned by this function
 }
+
 
 function createTrees(scene: Scene) {
   const spriteManagerTrees = new SpriteManager(
@@ -266,7 +269,6 @@ function createArcRotateCamera(scene: Scene) {
   return camera;
 }
 
-
 export default function createStartScene(engine: Engine) {
   let scene   = new Scene(engine);
   let ground  = createGround(scene);
@@ -287,5 +289,6 @@ export default function createStartScene(engine: Engine) {
   };
   return that;
 }
+
 
 

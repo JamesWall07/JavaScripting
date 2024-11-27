@@ -1,18 +1,16 @@
 import "@babylonjs/core/Debug/debugLayer";
 import "@babylonjs/inspector";
-
 import {
-  Scene,
-  ArcRotateCamera,
-  Vector3,
-  HemisphericLight,
-  MeshBuilder,
-  Mesh,
-  Light,
-  Camera,
-  Engine,
-} from "@babylonjs/core";
-
+    Scene,
+    ArcRotateCamera,
+    Vector3,
+    HemisphericLight,
+    MeshBuilder,
+    Mesh,
+    Light,
+    Camera,
+    Engine,
+  } from "@babylonjs/core";
   
   
   function createBox(scene: Scene) {
