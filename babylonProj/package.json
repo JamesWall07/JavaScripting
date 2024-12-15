@@ -11,7 +11,7 @@
     "lighting01preview": "vite preview lighing01 --host",
     "element01build": "tsc && vite build element01",
     "element01preview": "vite preview element01 --host",
-    "element02build": "tsc && vite build element02",
+    "element02build": "vite build element02",
     "element02preview": "vite preview element02 --host",
     "collision03build": "vite build collision03",
     "collision03preview": "vite preview collision03 --host",
