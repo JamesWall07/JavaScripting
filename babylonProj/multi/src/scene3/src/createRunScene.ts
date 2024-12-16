@@ -7,16 +7,16 @@ import {
   _ENVTextureLoader,
 } from "@babylonjs/core";
 
-import { SceneData } from "/workspaces/JavaScripting/babylonProj/multi/src/scene3/src/interfaces";
+import { SceneData } from "./interfaces";
 
 import {
   keyActionManager,
   keyDownMap,
   keyDownHeld,
   getKeyDown,
-} from "/workspaces/JavaScripting/babylonProj/multi/src/scene3/src/keyActionManager";
+} from "./keyActionManager";
 
-import { characterActionManager } from "/workspaces/JavaScripting/babylonProj/multi/src/scene3/src/characterActionManager";
+import { characterActionManager } from "./characterActionManager";
 
 import {
   bakedAnimations,
@@ -24,13 +24,13 @@ import {
   idle,
   getAnimating,
   toggleAnimating,
-} from "/workspaces/JavaScripting/babylonProj/multi/src/scene3/src/bakedAnimations";
+} from "./bakedAnimations";
 
 import "@babylonjs/core/Materials/Textures/Loaders/envTextureLoader";
 import "@babylonjs/core/Helpers/sceneHelpers";
 
 // havok physics collisions
-import { collisionDeclaration } from "/workspaces/JavaScripting/babylonProj/multi/src/scene3/src/collisionDeclaration.ts";
+import { collisionDeclaration } from "./collisionDeclaration.ts";
 
 export default function createRunScene(runScene: SceneData) {
   

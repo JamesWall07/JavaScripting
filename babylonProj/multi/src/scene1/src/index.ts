@@ -1,5 +1,5 @@
 import { Engine } from "@babylonjs/core";
-import createStartScene from "./createStartScene";
+import createScene1 from "./createStartScene";
 import createRunScene from "./createRunScene";
 import "./main.css";
 
@@ -11,10 +11,17 @@ canvas.id = CanvasName;
 canvas.classList.add("background-canvas");
 document.body.appendChild(canvas);
 
-let eng = new Engine(canvas, true, {}, true);
-let startScene = createStartScene(eng);
-createRunScene(startScene);
+let scene;
+let scenes: any[] = [];
 
-eng.runRenderLoop(() => {
-  startScene.scene.render();
-});
+let eng = new Engine(canvas, true, {}, true);
+scenes[0] = createScene1(eng);
+scene = scenes[0].scene;
+setSceneIndex(0);
+
+export default function setSceneIndex(i: number) {
+  eng.runRenderLoop(() => {
+    scenes[i].scene.render();
+  });
+  createRunScene(scenes[i]);
+}
