@@ -1,7 +1,7 @@
 import { Engine} from "@babylonjs/core";
-import createScene1  from "./scene1/element01/src/createStartScene";
-import createScene2  from "./scene2/element02/src/createStartScene";
-import createScene3  from "./scene3/collision03/src/createStartScene";
+import createScene1  from "./scene1/src/createStartScene";
+import createScene2  from "./scene2/src/createStartScene";
+import createScene3  from "./scene3/src/createStartScene";
 import createScene4  from "./scene4/gui04/src/gameScene";
 import menuScene from "./gui/guiScene";
 import "./main.css";
