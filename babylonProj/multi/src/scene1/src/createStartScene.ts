@@ -6,6 +6,7 @@ import {
   Vector3,
   MeshBuilder,
   Mesh,
+  Texture,
   StandardMaterial,
   HemisphericLight,
   PointLight,
@@ -16,10 +17,20 @@ import {
   Engine,
 } from "@babylonjs/core";
 
+// Define constants for texture paths
+const METAL_TEXTURE_PATH = "/workspaces/JavaScripting/babylonProj/multi/assets/textures/metal.jpg";
+const BRICK_TEXTURE_PATH = "/workspaces/JavaScripting/babylonProj/multi/assets/textures/brick.jpg";
+
 function createBox(scene) {
   let box = MeshBuilder.CreateBox("box", scene);
   box.position.y = 3;
   box.position.y = 0.51;
+
+  // Create material for the box
+  let boxMaterial = new StandardMaterial("boxMaterial", scene);
+  boxMaterial.diffuseTexture = new Texture(BRICK_TEXTURE_PATH, scene);
+  box.material = boxMaterial;
+
   return box;
 }
 
@@ -91,7 +102,13 @@ function createSphere(scene: Scene) {
     scene
   );
   sphere.position.y = 1.5;
-  return sphere;
+
+    // Create material for the sphere
+    let sphereMaterial = new StandardMaterial("sphereMaterial", scene);
+    sphereMaterial.diffuseTexture = new Texture(METAL_TEXTURE_PATH, scene);
+    sphere.material = sphereMaterial;
+  
+    return sphere;
 }
 
 function createGround(scene: Scene) {
