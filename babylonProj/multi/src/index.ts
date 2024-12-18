@@ -1,7 +1,6 @@
 import { Engine} from "@babylonjs/core";
 import createScene1  from "./scene1/src/createStartScene";
 import createScene2  from "./scene2/src/createStartScene";
-import createScene3  from "./scene3/src/createStartScene";
 import createScene4  from "./scene4/gui04/src/gameScene";
 import menuScene from "./gui/guiScene";
 import "./main.css";
@@ -21,8 +20,7 @@ let eng = new Engine(canvas, true, {}, true);
 let gui = menuScene(eng);
 scenes[0] = createScene1(eng);
 scenes[1] = createScene2(eng);
-scenes[2] = createScene3(eng);
-scenes[3] = createScene4(eng);
+scenes[2] = createScene4(eng);
 scene = scenes[0].scene;
 setSceneIndex(0);
 

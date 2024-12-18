@@ -20,6 +20,12 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
+  esbuild: {
+    target: "esnext",
+    supported: {
+      'top-level-await': true //browsers can handle top-level-await features
+      }
+  },
 });
 
 // https://forum.babylonjs.com/t/importing-and-implementing-havok-in-vite-react-ts-project-fails/48441/4

@@ -6,7 +6,6 @@ import {
   Vector3,
   MeshBuilder,
   Mesh,
-  Texture,
   StandardMaterial,
   HemisphericLight,
   PointLight,
@@ -15,21 +14,17 @@ import {
   Color3,
   ShadowGenerator,
   Engine,
+  Texture,
 } from "@babylonjs/core";
-
-// Define constants for texture paths
-const METAL_TEXTURE_PATH = "/workspaces/JavaScripting/babylonProj/multi/assets/textures/metal.jpg";
-const BRICK_TEXTURE_PATH = "/workspaces/JavaScripting/babylonProj/multi/assets/textures/brick.jpg";
 
 function createBox(scene) {
   let box = MeshBuilder.CreateBox("box", scene);
   box.position.y = 3;
   box.position.y = 0.51;
 
-  // Create material for the box
-  let boxMaterial = new StandardMaterial("boxMaterial", scene);
-  boxMaterial.diffuseTexture = new Texture(BRICK_TEXTURE_PATH, scene);
-  box.material = boxMaterial;
+  const boxMat = new StandardMaterial("boxMat");
+  boxMat.diffuseTexture = new Texture("./assets/textures/brick.jpg");
+  box.material = boxMat;
 
   return box;
 }
@@ -62,7 +57,7 @@ function createSpotLight(scene: Scene) {
     scene
   );
   light.intensity = 0.7;
-  light.diffuse = new Color3(1, 0, 0);
+  light.diffuse = new Color3(10, 5, 0);
   light.specular = new Color3(0, 1, 0);
   return light;
 }
@@ -75,7 +70,7 @@ function createHemisphericLight(scene: Scene) {
   );
   light.intensity = 0.3;
   light.diffuse = new Color3(1, 0, 0);
-  light.specular = new Color3(0, 1, 0);
+  light.specular = new Color3(0, 8, 0);
   light.groundColor = new Color3(0, 1, 0);
   return light;
 }
@@ -103,12 +98,11 @@ function createSphere(scene: Scene) {
   );
   sphere.position.y = 1.5;
 
-    // Create material for the sphere
-    let sphereMaterial = new StandardMaterial("sphereMaterial", scene);
-    sphereMaterial.diffuseTexture = new Texture(METAL_TEXTURE_PATH, scene);
-    sphere.material = sphereMaterial;
-  
-    return sphere;
+  const ballMat = new StandardMaterial("ballMat");
+  ballMat.diffuseTexture = new Texture("./assets/textures/metal.jpg");
+  sphere.material = ballMat;
+
+  return sphere;
 }
 
 function createGround(scene: Scene) {

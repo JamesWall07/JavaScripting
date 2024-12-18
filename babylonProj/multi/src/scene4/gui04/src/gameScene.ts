@@ -37,7 +37,7 @@ function backgroundMusic(scene: Scene): Sound{
 
 function createGround(scene: Scene) {
   const groundMaterial = new StandardMaterial("groundMaterial");
-  const groundTexture = new Texture("./assets/textures/wood.jpg");
+  const groundTexture = new Texture("./assets/textures/brick.jpg");
   groundTexture.uScale  = 4.0; //Repeat 5 times on the Vertical Axes
   groundTexture.vScale  = 4.0; //Repeat 5 times on the Horizontal Axes
   groundMaterial.diffuseTexture = groundTexture;
@@ -102,7 +102,7 @@ function createBox1(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/metal.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);
@@ -118,7 +118,7 @@ function createBox2(scene: Scene) {
 
   var texture = new StandardMaterial("reflective", scene);
   texture.ambientTexture = new Texture(
-    "./assets/textures/reflectivity.png",
+    "./assets/textures/metal.jpg",
     scene
   );
   texture.diffuseColor = new Color3(1, 1, 1);

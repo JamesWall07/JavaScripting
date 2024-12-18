@@ -16,7 +16,9 @@
     "collision03build": "vite build collision03",
     "collision03preview": "vite preview collision03 --host",
     "gui04build": "tsc && vite build gui04",
-    "gui04preview": "vite preview gui04 --host"
+    "gui04preview": "vite preview gui04 --host",
+    "multibuild": "vite build multi",
+    "multipreview": "vite preview multi --host"
   },
   "devDependencies": {
     "@babylonjs/core": "^7.33.0",

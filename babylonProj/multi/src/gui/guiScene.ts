@@ -99,7 +99,6 @@ import {
       button1: GUI.Button;
       button2: GUI.Button;
       button3: GUI.Button;
-      button4: GUI.Button;
       camera: Camera;
     }
   
@@ -111,7 +110,6 @@ import {
     var button1 = createSceneButton(scene,"but1", "1",1,"-150px", "120px", advancedTexture);
     var button2 = createSceneButton(scene,"but2", "2", 2,"-50px", "120px", advancedTexture);
     var button3 = createSceneButton(scene,"but3", "3",3,"50px", "120px", advancedTexture);
-    var button4 = createSceneButton(scene,"but4", "4", 4,"150px", "120px", advancedTexture);
     var camera = createArcRotateCamera(scene);
 
  
@@ -121,7 +119,6 @@ import {
       button1,
       button2,
       button3,
-      button4,
       camera
     };
     
